@@ -11,10 +11,7 @@ public class NameTests
     public void Name_Should_ThrowArgumentException_WhenValueIsInvalid(string? value)
     {
         // Act
-        Name Action()
-        {
-            return new Name(value);
-        }
+        Name Action() => new Name(value);
 
         // Assert
         FluentActions.Invoking(Action).Should().Throw<ArgumentNullException>()
